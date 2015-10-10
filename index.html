@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app>
 <head>
     <meta charset="utf-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
     <title>GIT lesson 2</title>
+    <script>
+        function NameCtrl($scope) {
+            $scope.fn = 'Jim';
+            $scope.ln = 'Tornen';
+        }
+    </script>
 </head>
 <body>
     <p>new changing in this file</p>
     <p>second change in this file</p>
     <p>third change in this file</p>
+    <div ng-controller="NameCtrl">
+        First name: <input type="text" ng-model="fn" />
+        <br />        Last name: <input type="text" ng-model="ln" />
+        Hello {{fn}} {{ln}}
+    </div>
 </body>
 </html>
